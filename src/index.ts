@@ -17,7 +17,7 @@ app.post("/api/token", (req, res) => {
   res.json({ token });
 });
 
-// --- Middleware d'authentification ---
+
 function authenticate(req: any, res: any, next: any) {
   const authHeader = req.headers.authorization;
   if (!authHeader) return res.status(401).send("Token manquant");
@@ -48,7 +48,7 @@ app.post("/api/justify", authenticate, (req: any, res: any) => {
   res.type("text/plain").send(justified);
 });
 
-// --- Démarrage du serveur ---
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`✅ Serveur lancé sur http://localhost:${PORT}`));
 

@@ -1,4 +1,4 @@
-// --- Logique de justification du texte ---
+
 export function justifyText(text: string, lineLength = 80): string {
   const words = text.trim().split(/\s+/);
   const lines: string[] = [];

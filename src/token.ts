@@ -6,7 +6,7 @@ export interface TokenData {
   lastReset: number;
 }
 
-// Stockage en mémoire
+
 export const TOKENS: Record<string, TokenData> = {};
 
 export function generateToken(email: string): string {
